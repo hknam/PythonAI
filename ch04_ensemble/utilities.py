@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def visualize_classifier(classifier, X, y):
+def visualize_classifier(classifier, X, y, title):
     min_x, max_x = X[:, 0].min() - 1.0, X[:, 0].max() + 1.0
     min_y, max_y = X[:, 1].min() - 1.0, X[:, 1].max() + 1.0
     
@@ -23,5 +23,6 @@ def visualize_classifier(classifier, X, y):
 
     plt.xticks((np.arange(int(X[:, 0].min() - 1), int(X[:, 0].max() + 1), 1.0)))
     plt.yticks((np.arange(int(X[:, 1].min() - 1), int(X[:, 1].max() + 1), 1.0)))
+    plt.title(title)
     plt.show() 
     
